@@ -13,12 +13,9 @@ class DirectorsController < ApplicationController
   end 
 
   def youngest
-
+    @young = Director.order({:dob => :desc}).at(0)
     render({:template => "directors_template/youngest.html.erb" })
   end
 
-  def all_movies
-
-    render({:template => "directors_template/all_movies.html.erb" })
-  end 
+  
 end
