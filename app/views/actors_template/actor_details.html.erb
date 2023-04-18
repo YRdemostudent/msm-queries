@@ -84,29 +84,29 @@
     </th>
   </tr>
 
+ <% @the_actor.characters.each do |character| %>
     <tr>
       <td>
-        The Shawshank Redemption
+        <%= character.movie.title %>
       </td>
 
       <td>
-        1994
+        <%= character.movie.year %>
       </td>
 
       <td>
-
-
-          Frank Darabont
+        <%= character.movie.director.name %>
       </td>
 
       <td>
-        Andy Dufresne
+        <%= character.name %>
       </td>
 
       <td>
-        <a href="/movies/">
+        <a href="/movies/<%= character.movie.id %>">
           Show details
         </a>
       </td>
     </tr>
+  <% end %>
 </table>
