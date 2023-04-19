@@ -1,8 +1,8 @@
 databases:
   - name: msmqueries
     plan: free
-    databaseName: MSM-QUERIES
-    user: MSM-QUERIES
+    databaseName: msmqueries
+    user: msmqueries
 
 services:
   - type: web
