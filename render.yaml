@@ -1,0 +1,20 @@
+databases:
+  - name: MSM-QUERIES
+    plan: free
+    databaseName: MSM-QUERIES
+    user: MSM-QUERIES
+
+services:
+  - type: web
+    name: MSM-QUERIES
+    plan: free
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: MSM-QUERIES
+          property: connectionString
+      - key: 473a488f44703f7556565a8fdd7f4d06
+        sync: false
