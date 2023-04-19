@@ -16,5 +16,5 @@ services:
         fromDatabase:
           name: msmqueries
           property: connectionString
-      - key: 473a488f44703f7556565a8fdd7f4d06
+      - key: RAILS_MASTER_KEY
         sync: false
